@@ -8,6 +8,7 @@
     "sass": "^1.26.5"
   },
   "scripts": {
-    "start": "parcel index.html --no-source-maps"
+    "start": "parcel index.html --no-source-maps",
+    "dev": "parcel build index.html"
   }
 }
