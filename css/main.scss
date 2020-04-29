@@ -10,7 +10,7 @@ html {
 
 body {
   color: #fff;
-  font-family: 'Inconsolata', monospace;
+  font-family: "Inconsolata", monospace;
 }
 
 .decoration-dots {
@@ -19,7 +19,10 @@ body {
   position: absolute;
   top: 0%;
   left: 15%;
-  background-image: radial-gradient(rgba(255, 255, 255, 0.422) 1px, transparent 1px);
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.422) 1px,
+    transparent 1px
+  );
 }
 
 header {
@@ -29,7 +32,7 @@ header {
   color: #fff;
   font-size: 1rem;
   grid-area: header;
-  border-bottom: 1px solid rgba(#fff, .3);
+  border-bottom: 1px solid rgba(#fff, 0.3);
   animation: fadeInTop 1s ease-in-out;
 }
 
@@ -60,7 +63,7 @@ header {
 .main__desc {
   font-size: 2rem;
   font-weight: 500;
-  padding-top: .5rem;
+  padding-top: 0.5rem;
   max-width: 500px;
   opacity: 0;
   animation: fadeIn 2s 2s forwards;
@@ -97,4 +100,26 @@ header {
   left: 0;
   width: 100vw;
   height: 100vh;
+}
+
+@media screen and (max-width: 480px) {
+  .fullscreen {
+    grid-template-columns: 20px 3fr 3fr 300px 20px;
+    grid-template-areas:
+      "left header header header"
+      "left main1 main2 main2"
+      "left footer footer footer";
+  }
+  .nav {
+    padding: 0;
+    align-items: center;
+
+    &__right {
+      font-size: .9rem;
+    }
+
+    &__link:not(:last-child) {
+      padding-right: 1rem;
+    }
+  }
 }
